@@ -2,9 +2,28 @@
 title="Login into your account"
 primaryBtnText="Login Now"
 secondaryBtnText="Sign In Now"
+(submit)="submit()"
 >
-<form>
+<form [formGroup]="loginForm">
+    <app-primary-input
+    formControlName="email"
+    inputName="email"
+    type="email"
+    label="Email"
+    placeholder="fuladodetal@email.com"
+    >
+    <img src="/assets/email.svg">
+    </app-primary-input>
 
+    <app-primary-input
+    formControlName="password"
+    inputName="password"
+    type="password"
+    label="Senha"
+    >
+    <img src="/assets/senha.svg">
+    </app-primary-input>
+    <span>Forgot Password?</span>
 </form>
 
 </app-layout>
